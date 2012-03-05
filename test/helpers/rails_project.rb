@@ -90,6 +90,10 @@ module CompassRails
         end
       end
 
+      def rake(*args)
+        rake_command(args, version)
+      end
+
       # COMPASS METHODS
 
       def run_compass(command)

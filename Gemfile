@@ -12,6 +12,7 @@ group :test do
   gem 'mocha'
   gem "appraisal", :git => 'git://github.com/scottdavis/appraisal.git'
   gem 'rainbow'
+  gem 'ruby-debug19'
 end
 
 unless ENV["CI"]

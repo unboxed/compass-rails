@@ -38,6 +38,11 @@ module CompassRails
       run_command("rails #{options.join(' ')}", GEMFILES[version])
     end
 
+    def rake_command(options, version)
+      debug("Running rake command with: version = #{version} #{Array(options).join(' ')}".foreground(:cyan))
+      run_command("rake #{Array(options).join(' ')}", GEMFILES[version])
+    end
+
     # Generate a rails application without polluting our current set of requires
     # with the rails libraries. This will allow testing against multiple versions of rails
     # by manipulating the load path.
